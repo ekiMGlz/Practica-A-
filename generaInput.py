@@ -19,3 +19,4 @@ for i in data.keys():
     coorN = data[i]
     f.write("({0} {1} {2} {3})".format(i, coorN[0], coorN[1], np.linalg.norm(coorN-coorE)))
 f.write(")")
+f.close()
