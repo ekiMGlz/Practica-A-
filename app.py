@@ -2,6 +2,8 @@
 
 import numpy as np
 import scipy.misc as misc
+import matplotlib
+matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 import json
 import imageio
