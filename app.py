@@ -170,11 +170,12 @@ def onClickReset():
     root.destroy()
     root=Tk()
     root.title("A*")
+    root.protocol("WM_DELETE_WINDOW", exit)
     a = App(root)
     root.mainloop()
-
     
 root=Tk()
 root.title("A*")
+root.protocol("WM_DELETE_WINDOW", exit)
 a = App(root)
 root.mainloop()

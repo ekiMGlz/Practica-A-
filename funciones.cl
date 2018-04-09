@@ -70,7 +70,7 @@
     (setq cerrado nil)
     (setq final nil)
 
-    (setq in (open "data\\in.txt"))
+    (setq in (open "data/in.txt"))
     (setq start (read-line in))
     (setq end (read-line in))
     (setq dist (read-line in))
@@ -80,7 +80,7 @@
     (setq end (car(string-to-list end)))
     (setq dist (car(string-to-list dist)))
 
-    (setq in (open "data\\connections5.txt"))
+    (setq in (open "data/connections5.txt"))
     (setq neigh (read-line in))
     (close in)
 
