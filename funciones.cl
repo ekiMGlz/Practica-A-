@@ -22,6 +22,7 @@
 ;Lista de conexiones: neigh
 ;Lista de nodos: dist
 (defun expand()
+
     (setq c ( / (sqrt (+ (expt  (- (third current) (third end)) 2) (expt (-(fourth current) (fourth end)) 2))) 2 ) 
         a (* (sqrt 2) c)
         hijos (cdr (find (car current) neigh :key #'car)))
@@ -29,10 +30,11 @@
         (cond 
             ((find (car aux) cerrado :key #'car))
             (t
-                (setq node (find (car aux) dist :key #'car))
+                (setq node (copy-tree (find (car aux) dist :key #'car)))
                 (push (car current) (cdr node))
                 (setq node (append node (list (+ (cadr aux) (sixth current)))))
                 (setq node (append node (list (+ (fifth node) (sixth node)))))
+                
                 (if (contorno node) (setq abierto (abiertoInsert node abierto)))
             )
         )
